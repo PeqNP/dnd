@@ -22,6 +22,21 @@ func rollAction() {
      */
 }
 
+// MARK: - (Passive) Perception Check
+
+func rollForPerception() {
+    // Compares hiding character's Dexterity (Stealth) with creature's Wisdom Modifier & Perception score and any other bonuses.
+    // e.g. Target character has Dexterity 15 (+2 modifier) Stealth (+2) 10 + 2 + 2 = 14
+    // e.g. Perceiving character has Wisdom 15 (+2 modifer) Perception (+3) 10 + 2 + 3 = 15
+}
+
+// MARK: - Falling
+
+func fallDamage() -> Int {
+    // 1d6 bludgeoning damage for every 10 feet it fell, to a maximum of 20d6
+    0
+}
+
 // MARK: - Ability Check
 
 /**
@@ -46,21 +61,25 @@ func rollAbilityCheck(for ability: Ability) {
      */
 }
 
+enum Reaction {
+    case opportunityAttack
+}
+
 /// A list of Ability actions
 /// TODO: This is _very_ incomplete. These actions will be defined as the game progresses.
 /// These will eventually be mapped mapped to respective skills. Indeed, these may not be necessary at all. Unclear atm.
 enum AbilityAction {
-    case acrobaticStunt
-    case palmAnObject
-    case stayHidden
+    case jump
+    case shove
+    case hide
 }
 
 /// Returns the respective Ability, given an Action, to use for an Ability Check.
 func abilityForAction(_ action: AbilityAction) -> Ability {
     switch action {
-    case .acrobaticStunt,
-         .palmAnObject,
-         .stayHidden:
+    case .shove,
+         .jump,
+         .hide:
         return .dexterity
     }
 }

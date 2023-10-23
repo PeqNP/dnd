@@ -27,7 +27,7 @@ enum Skill {
     case deception // Tell convincing lie or wear disguise convincingly
     case intimidation // Awe or threaten someone to do what you want
     case performance // Perform music, dance, acting, or storytelling
-    case persuasion /// Honestly and graciously convince someone of something
+    case persuasion // Honestly and graciously convince someone of something
 }
 
 func abilityForSkill(_ skill: Skill) -> Ability {
