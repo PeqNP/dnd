@@ -29,7 +29,18 @@
 		A24F09B32AE733BC00B52F3D /* Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24F09B22AE733BC00B52F3D /* Alignment.swift */; };
 		A24F09B52AE7368500B52F3D /* DamageAndHealth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24F09B42AE7368500B52F3D /* DamageAndHealth.swift */; };
 		A24F09B72AE7383C00B52F3D /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24F09B62AE7383C00B52F3D /* Environment.swift */; };
+		A2D16E9D2AE82ADB000D3ACD /* RollForIntiative.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D16E9C2AE82ADB000D3ACD /* RollForIntiative.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A2D16E972AE82AAF000D3ACD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A6B99812AE6A03A009D64EB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A6B998D2AE6A03C009D64EB;
+			remoteInfo = "dnd iOS";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5A6B99862AE6A03A009D64EB /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -53,6 +64,9 @@
 		A24F09B22AE733BC00B52F3D /* Alignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alignment.swift; sourceTree = "<group>"; };
 		A24F09B42AE7368500B52F3D /* DamageAndHealth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamageAndHealth.swift; sourceTree = "<group>"; };
 		A24F09B62AE7383C00B52F3D /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		A26B1CD32AE835A700608170 /* dnd iOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "dnd iOS.xctestplan"; sourceTree = "<group>"; };
+		A2D16E932AE82AAF000D3ACD /* dndTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dndTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2D16E9C2AE82ADB000D3ACD /* RollForIntiative.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollForIntiative.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,16 +84,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A2D16E902AE82AAF000D3ACD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		5A6B99802AE6A03A009D64EB = {
 			isa = PBXGroup;
 			children = (
+				A26B1CD32AE835A700608170 /* dnd iOS.xctestplan */,
 				5A6B99B92AE6A0BC009D64EB /* Foundation */,
 				5A6B99852AE6A03A009D64EB /* dnd Shared */,
 				5A6B99902AE6A03C009D64EB /* dnd iOS */,
 				5A6B99A02AE6A03C009D64EB /* dnd macOS */,
+				A2D16E942AE82AAF000D3ACD /* dndTests */,
 				5A6B998F2AE6A03C009D64EB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,6 +123,7 @@
 			children = (
 				5A6B998E2AE6A03C009D64EB /* dnd.app */,
 				5A6B999F2AE6A03C009D64EB /* dnd.app */,
+				A2D16E932AE82AAF000D3ACD /* dndTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,6 +164,14 @@
 			path = Foundation;
 			sourceTree = "<group>";
 		};
+		A2D16E942AE82AAF000D3ACD /* dndTests */ = {
+			isa = PBXGroup;
+			children = (
+				A2D16E9C2AE82ADB000D3ACD /* RollForIntiative.swift */,
+			);
+			path = dndTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -177,6 +209,24 @@
 			productReference = 5A6B999F2AE6A03C009D64EB /* dnd.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A2D16E922AE82AAF000D3ACD /* dndTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2D16E9B2AE82AAF000D3ACD /* Build configuration list for PBXNativeTarget "dndTests" */;
+			buildPhases = (
+				A2D16E8F2AE82AAF000D3ACD /* Sources */,
+				A2D16E902AE82AAF000D3ACD /* Frameworks */,
+				A2D16E912AE82AAF000D3ACD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2D16E982AE82AAF000D3ACD /* PBXTargetDependency */,
+			);
+			name = dndTests;
+			productName = dndTests;
+			productReference = A2D16E932AE82AAF000D3ACD /* dndTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -192,6 +242,10 @@
 					};
 					5A6B999E2AE6A03C009D64EB = {
 						CreatedOnToolsVersion = 15.0.1;
+					};
+					A2D16E922AE82AAF000D3ACD = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 5A6B998D2AE6A03C009D64EB;
 					};
 				};
 			};
@@ -210,6 +264,7 @@
 			targets = (
 				5A6B998D2AE6A03C009D64EB /* dnd iOS */,
 				5A6B999E2AE6A03C009D64EB /* dnd macOS */,
+				A2D16E922AE82AAF000D3ACD /* dndTests */,
 			);
 		};
 /* End PBXProject section */
@@ -235,6 +290,13 @@
 				5A6B99AC2AE6A03C009D64EB /* GameScene.sks in Resources */,
 				5A6B99B02AE6A03C009D64EB /* Assets.xcassets in Resources */,
 				5A6B99AA2AE6A03C009D64EB /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2D16E912AE82AAF000D3ACD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +330,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A2D16E8F2AE82AAF000D3ACD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2D16E9D2AE82ADB000D3ACD /* RollForIntiative.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A2D16E982AE82AAF000D3ACD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A6B998D2AE6A03C009D64EB /* dnd iOS */;
+			targetProxy = A2D16E972AE82AAF000D3ACD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5A6B99952AE6A03C009D64EB /* Main.storyboard */ = {
@@ -420,6 +498,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "DnD Buddy";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -449,6 +529,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "DnD Buddy";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -525,6 +607,45 @@
 			};
 			name = Release;
 		};
+		A2D16E992AE82AAF000D3ACD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bithead.dndTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dnd.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/dnd";
+			};
+			name = Debug;
+		};
+		A2D16E9A2AE82AAF000D3ACD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bithead.dndTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dnd.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/dnd";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -551,6 +672,15 @@
 			buildConfigurations = (
 				5A6B99B72AE6A03C009D64EB /* Debug */,
 				5A6B99B82AE6A03C009D64EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2D16E9B2AE82AAF000D3ACD /* Build configuration list for PBXNativeTarget "dndTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2D16E992AE82AAF000D3ACD /* Debug */,
+				A2D16E9A2AE82AAF000D3ACD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

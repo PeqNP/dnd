@@ -1,0 +1,28 @@
+{
+  "configurations" : [
+    {
+      "id" : "D9F92A40-C88F-4A8A-B71F-3451805C9252",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:dnd.xcodeproj",
+      "identifier" : "5A6B998D2AE6A03C009D64EB",
+      "name" : "dnd iOS"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:dnd.xcodeproj",
+        "identifier" : "A2D16E922AE82AAF000D3ACD",
+        "name" : "dndTests"
+      }
+    }
+  ],
+  "version" : 1
+}

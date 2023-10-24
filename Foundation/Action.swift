@@ -1,5 +1,17 @@
 /**
  Encapsulates rules for an outcome of an action.
+ 
+ 1 round = ~6 seconds
+ 
+ Combat:
+ Round
+ 1. Determine surprise TBD. Many factors may determine if a creature is surprised.
+ 2. Establish positions TBD. Could place creatures in static position or RNG position.
+ 3. Roll initiative
+ 4. Take turns. Each creature takes turn in the initiative order
+ 5. Begin the next round. Repeat steps 4 and 5 until the fighting stops.
+ 
+ If a creature is surprised, they can not take a turn in the first round. You also can not take a reaction.
  */
 
 import Foundation
@@ -22,12 +34,25 @@ func rollAction() {
      */
 }
 
+/// Roll for initiative. Used to determine order of turns in combat.
+func rollInitiative(for creature: [Creature]) -> [Creature] {
+    creature
+}
+
 // MARK: - (Passive) Perception Check
 
 func rollForPerception() {
     // Compares hiding character's Dexterity (Stealth) with creature's Wisdom Modifier & Perception score and any other bonuses.
     // e.g. Target character has Dexterity 15 (+2 modifier) Stealth (+2) 10 + 2 + 2 = 14
     // e.g. Perceiving character has Wisdom 15 (+2 modifer) Perception (+3) 10 + 2 + 3 = 15
+}
+
+// MARK: - Choking
+
+func choke() {
+    // 1 + Constitution modifier, minimum of 30 seconds
+    // Creature can survive for 1 round + Constitution modifier, minimum of 1 round
+    // On next round, its HP drops to 0 and is dying. HP can not be regained or be stabilized until it can breath again
 }
 
 // MARK: - Falling

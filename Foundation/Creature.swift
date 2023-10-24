@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum CreatureType {
+enum CreatureType: Equatable {
     case aberration
     case beast
     case celestial
@@ -25,27 +25,27 @@ enum CreatureType {
 }
 
 // TODO:
-enum CreatureClass {
+enum CreatureClass: Equatable {
     case wizard
 }
 
 // TODO:
-enum CreatureBackground {
+enum CreatureBackground: Equatable {
     case sage
 }
 
 // TODO:
-enum CreatureRace {
+enum CreatureRace: Equatable {
     case highElf
 }
 
 // TODO:
-enum CreatureSize {
+enum CreatureSize: Equatable {
     case medium
 }
 
-struct Creature {
-    struct Ability {
+struct Creature: Equatable {
+    struct Ability: Equatable {
         let strength: Int
         let dexterity: Int
         let constitution: Int
@@ -54,7 +54,7 @@ struct Creature {
         let charisma: Int
     }
     
-    struct Skill {
+    struct Skill: Equatable {
         // Strength
         let athletics: Int
 
