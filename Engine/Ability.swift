@@ -23,7 +23,7 @@ typealias AbilityScore = Int
 typealias AbilityModifier = Int
 
 /// Ability Score & Modifiers (Proficiency Bonus?)
-let abilityScoreModifier: [AbilityScore: AbilityModifier] = [
+private let abilityScoreModifier: [AbilityScore: AbilityModifier] = [
     1: -5,
     2: -4,
     3: -4,
@@ -55,3 +55,11 @@ let abilityScoreModifier: [AbilityScore: AbilityModifier] = [
     29: 9,
     30: 10
 ]
+
+func abilityModifier(for abilityScore: AbilityScore) -> AbilityModifier {
+    guard let modifier = abilityScoreModifier[abilityScore] else {
+        log.c("Attempting to query a score modifier for an ability score of \(abilityScore)")
+        return 0
+    }
+    return modifier
+}

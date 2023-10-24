@@ -35,8 +35,30 @@ func rollAction() {
 }
 
 /// Roll for initiative. Used to determine order of turns in combat.
-func rollInitiative(for creature: [Creature]) -> [Creature] {
-    creature
+func rollInitiative(for creatures: [Creature]) -> [Creature] {
+    let groups = Dictionary(grouping: creatures, by: { abilityModifier(for: $0.ability.dexterity) })
+    let sortedAbilityModifiers: [AbilityModifier] = groups.keys.sorted(by: >)
+    var orderedCreatures = [Creature]()
+    for abilityModifier in sortedAbilityModifiers {
+        guard let creatures = groups[abilityModifier] else {
+            log.e("Attempting to access group with invalid AbilityModifier \(abilityModifier) groups \(groups)")
+            continue
+        }
+        let numCreaturesInGroup = creatures.count
+        while true {
+            let randomNumbers = creatures.map { _ in
+                Library.randomNumber(0, 100)
+            }
+            // All numbers are unique
+            if Array(Set(randomNumbers)).count == numCreaturesInGroup {
+                let combined = Array(zip(randomNumbers, creatures))
+                let ordered = combined.sorted(by: { $0.0 > $1.0 })
+                orderedCreatures.append(contentsOf: ordered.map { $0.1 })
+                break
+            }
+        }
+    }
+    return orderedCreatures
 }
 
 // MARK: - (Passive) Perception Check

@@ -26,7 +26,21 @@ enum CreatureType: Equatable {
 
 // TODO:
 enum CreatureClass: Equatable {
+    case barbarian
+    case bard
+    case cleric
+    case druid
+    case fighter
+    case monk
+    case paladin
+    case ranger
+    case rogue
+    case sorcerer
+    case warlock
     case wizard
+    
+    case artificer
+    case bloodHunter
 }
 
 // TODO:
@@ -46,12 +60,12 @@ enum CreatureSize: Equatable {
 
 struct Creature: Equatable {
     struct Ability: Equatable {
-        let strength: Int
-        let dexterity: Int
-        let constitution: Int
-        let intelligence: Int
-        let wisdom: Int
-        let charisma: Int
+        let strength: AbilityScore
+        let dexterity: AbilityScore
+        let constitution: AbilityScore
+        let intelligence: AbilityScore
+        let wisdom: AbilityScore
+        let charisma: AbilityScore
     }
     
     struct Skill: Equatable {
@@ -97,7 +111,6 @@ struct Creature: Equatable {
     
     // Base values (?)
     let armorClass: Int
-    let initiative: Int
     let speed: Int
     let hitPoints: Int
 }
