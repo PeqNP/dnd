@@ -12,6 +12,70 @@
  5. Begin the next round. Repeat steps 4 and 5 until the fighting stops.
  
  If a creature is surprised, they can not take a turn in the first round. You also can not take a reaction.
+
+ Your Turn
+  - Move
+  - Combat Action
+     - Attack
+     - Cast a Spell
+     - Dash - Allows a character to move 2x it Speed e.g. 30 Speed = 60 ft
+     - Disengage - Your movement does not provoke opportunity attacks
+     - Dodge - Until start of next turn rolls made against you have disadvantage (?) Need more information on how to determine what hits and what does not. This benefit is lost if you received incapicated condition or your speed is reduced to 0 by a condition or another effect (fear?).
+     - Help
+     - Hide
+     - Ready (need more explanation)
+     - Search
+     - Use a Magic Item - Scrolls, potions(?)
+     - Use an Object - throw item(?)
+     - Use a Special Ability
+  - Communicate (Free)
+  - 1st Interact with Things (Free)
+  - 2nd Interact with Things (Requires Action, Use an Object) but can use infinite times during turn
+  - Do nothing
+ 
+  - Bonus Action. You may only use one Bonus Action type. Therefore, if you have more than one Bonus Action type, only one of those bonus actions may be performed.
+  A bonus action can be performed any time. However, some bonus actions define a specific time when they can be used (e.g. the last action) or something else may deprive you of your ability to use a bonus action (I don't know what this means).
+ 
+ Reaction
+ An event that triggers at a specific time, such as an Opportunity Attack.
+ You may only make one reaction per turn.
+ If a reaction inturrupts another creature's turn, they may resume their turn after the reaction.
+ A reaction typically triggers immediately at the trigger point unless the reaction says otherwise.
+ 
+ Movement & Position
+ Walking, running, jumping, climbing, and swimming. You can move up to your max speed. Your speed is deducted as you move.
+ 
+ A Creature can have a walk and flying speed. A creature may switch between the two speeds.
+ 1 Speed = 1 Foot
+ 
+ If one of these movement types is 0, the cost of movement is a rate of 2 speed for one foot (movement is halved) 2 Speed = 1 Foot
+ - Climbing
+ - Crawling
+ - Swimming
+
+ If a flying creature is restrained, and does not have the ability to hover, it will "fall." This may incur fall damage.
+ 
+ Difficult terrain costs 3 speed for one foot. (? the rules aren't quite clear)
+ 
+ Jumping
+ Long jump (horizontal) is feet equal to your Strength score
+ High jump (vertical) 3+ your Strength modifier (not score)
+ You must move at least 10ft before these distances can be jumped. If performing standing jump, these distances are halved.
+ 
+ Jumping is deducted similarly to other movement types such as climbing, swimming, etc.
+ 
+ Samples:
+ - A harpy has a walking speed of 20, flying speed of 40
+   Fly 10, Walk 10, Fly 20 more
+   Walk 15, Fly 25 more
+ - A badger has walking speed of 30, burrow of 10
+   Walk 10, it can no longer burrow
+   Burrow 10, Walk 20
+ - A human has walking speed of 30, strength of 10
+   Jump 10, Walk 20
+   Walk 25, Jump 5
+ 
+ Some surfaces may require a successful Strength (Athletics) check. For example, slippery surfaces or one with few handholds.
  */
 
 import Foundation
@@ -175,5 +239,4 @@ func rollSavingThrow() {
         - Apply any other bonuses / penalties as usual
         - If total >= DC, it is a success
      */
-
 }

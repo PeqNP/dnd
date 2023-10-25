@@ -53,9 +53,15 @@ enum CreatureRace: Equatable {
     case highElf
 }
 
-// TODO:
+typealias GargantuanSize = Int // Must be a value >= 20
+
 enum CreatureSize: Equatable {
-    case medium
+    case tiny // 2.5 sq/ft
+    case small // 5 sq/ft
+    case medium // 5 sq/ft
+    case large // 10 sq/ft
+    case huge // 15 sq/ft
+    case gargantuan(GargantuanSize) // 20+ sq/ft
 }
 
 struct Creature: Equatable {
@@ -96,6 +102,14 @@ struct Creature: Equatable {
         let intimidation: Int
         let performance: Int
         let persuasion: Int
+    }
+    
+    struct Speed {
+        let land: Int
+        let burrow: Int
+        let climb: Int
+        let fly: Int
+        let swim: Int
     }
     
     let `class`: CreatureClass
