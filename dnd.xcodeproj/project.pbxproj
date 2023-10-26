@@ -27,7 +27,7 @@
 		5A6B99BF2AE6A4F0009D64EB /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6B99BE2AE6A4F0009D64EB /* Action.swift */; };
 		5A6B99C12AE6A7A3009D64EB /* Proficiency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6B99C02AE6A7A3009D64EB /* Proficiency.swift */; };
 		A24F09B32AE733BC00B52F3D /* Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24F09B22AE733BC00B52F3D /* Alignment.swift */; };
-		A24F09B52AE7368500B52F3D /* DamageAndHealth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24F09B42AE7368500B52F3D /* DamageAndHealth.swift */; };
+		A24F09B52AE7368500B52F3D /* Combat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24F09B42AE7368500B52F3D /* Combat.swift */; };
 		A24F09B72AE7383C00B52F3D /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24F09B62AE7383C00B52F3D /* Environment.swift */; };
 		A28B0E852AE86C69002A8E4E /* Collection+dnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28B0E842AE86C69002A8E4E /* Collection+dnd.swift */; };
 		A28B0E872AE86D55002A8E4E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28B0E862AE86D55002A8E4E /* Logger.swift */; };
@@ -72,7 +72,7 @@
 		5A6B99BE2AE6A4F0009D64EB /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		5A6B99C02AE6A7A3009D64EB /* Proficiency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proficiency.swift; sourceTree = "<group>"; };
 		A24F09B22AE733BC00B52F3D /* Alignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alignment.swift; sourceTree = "<group>"; };
-		A24F09B42AE7368500B52F3D /* DamageAndHealth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamageAndHealth.swift; sourceTree = "<group>"; };
+		A24F09B42AE7368500B52F3D /* Combat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combat.swift; sourceTree = "<group>"; };
 		A24F09B62AE7383C00B52F3D /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		A26B1CD32AE835A700608170 /* dnd iOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "dnd iOS.xctestplan"; sourceTree = "<group>"; };
 		A28B0E842AE86C69002A8E4E /* Collection+dnd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+dnd.swift"; sourceTree = "<group>"; };
@@ -178,8 +178,8 @@
 				5A6B99BC2AE6A2EC009D64EB /* Ability.swift */,
 				5A6B99BE2AE6A4F0009D64EB /* Action.swift */,
 				A24F09B22AE733BC00B52F3D /* Alignment.swift */,
+				A24F09B42AE7368500B52F3D /* Combat.swift */,
 				5A6B99BA2AE6A24C009D64EB /* Creature.swift */,
-				A24F09B42AE7368500B52F3D /* DamageAndHealth.swift */,
 				A24F09B62AE7383C00B52F3D /* Environment.swift */,
 				A28B0E992AE87D02002A8E4E /* Library.swift */,
 				5A6B99C02AE6A7A3009D64EB /* Proficiency.swift */,
@@ -372,7 +372,7 @@
 				5A6B99C12AE6A7A3009D64EB /* Proficiency.swift in Sources */,
 				A28B0E872AE86D55002A8E4E /* Logger.swift in Sources */,
 				A28B0E912AE86E6E002A8E4E /* AnalyticsPublisher.swift in Sources */,
-				A24F09B52AE7368500B52F3D /* DamageAndHealth.swift in Sources */,
+				A24F09B52AE7368500B52F3D /* Combat.swift in Sources */,
 				A28B0E8D2AE86E4C002A8E4E /* AnalyticsListener.swift in Sources */,
 				A28B0E932AE86E79002A8E4E /* AnalyticsTransaction.swift in Sources */,
 				5A6B99922AE6A03C009D64EB /* AppDelegate.swift in Sources */,
