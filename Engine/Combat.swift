@@ -3,7 +3,7 @@
 
  ## Round (= ~6 seconds)
 
- 1. Determine surprise TBD. Many factors may determine if a creature is surprised.
+ 1. Determine surprise TBD. Many factors may determine if a creature is surprised. A DM is responsible if anyone is surprised. One context would be if a Sneak Attack was performed. If neither side is stealthy, they automatically notice each other. If not sneak attacking (yet), a Perception check is performed against Stealth check.
  2. Establish positions TBD. Could place creatures in static position or RNG position.
  3. Roll initiative
  4. Take turns. Each creature takes turn in the initiative order

@@ -15,7 +15,13 @@
 
  If a flying creature is restrained, and does not have the ability to hover, it will "fall." This may incur fall damage.
 
- Difficult terrain costs 3 speed for one foot. (? the rules aren't quite clear)
+ Difficult terrain costs 3 speed for one foot. (? the rules aren't quite clear) In other contexts it says difficult terrain costs 1 extra foot.
+ 
+ Difficult terrain can be considered:
+ - Vines
+ - Foes
+ - Furniture
+ - Etc.
 
  ## Jumping
 
@@ -36,8 +42,25 @@
    Jump 10, Walk 20
    Walk 25, Jump 5
 
- Some surfaces may require a successful Strength (Athletics) check. For example, slippery surfaces or one with few handholds.
+ Some surfaces may require a successful Strength (Athletics) check. For example, slippery surfaces or one with few handholds. A Cube should hold this information along with DC.
+ 
+ ## Being Prone
+ 
+ You may drop prone without using any of your speed. Standing up costs an amount of movement equal to half your speed. e.g. If you have 30 speed, it will take 15 feet to stand up. You can't stand up if you less than half of your speed. You stay prone.
+ 
+ ## Moving Around Creatures
+ 
+ Creatures are considered difficult terrain if you attempt to move through them. You may only move through an enemy's space if they are twice as large or twice as small as you.
+ 
+ You can't end your turn on a friend or foe's space.
+ 
+ If you leave an enemy's reach, you provoke an opportunity attack.
+ 
+ ## Flying
+ 
+ If flying Creature is knocked prone, has its speed reduced to 0, or is otherwise deprived of the ability to move, the Creature falls unless it has the ability to hover or held aloft by magic. A Creature will take fall damage at this point, if any.
  */
+
 import Foundation
 
 /// Determines whether a space is obscured or not
@@ -95,4 +118,3 @@ struct Room {
     // The number of cubes is determined by x * y * z
     let cubes: [Cube]
 }
-

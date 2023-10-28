@@ -6,11 +6,12 @@ import Foundation
 
 // MARK: - The D20 roll
 
+/// TBD: This may be doing too much.
 func rollAction() {
     /**
      1. Roll d20
-     2. Add proficiency bonus (requires creature sheet)
-        - (?) Bonsuses don't stack
+     2. Add Proficiency Bonus for Skill (requires creature sheet)
+        - (?) Bonuses don't stack
         - (?) Dis/advantage: Sometimes an dis/advantage occurs on ability check. If this occurs roll the d20 twice. Use higher # if advantage. Lower # if disadvantage.
             - These rolls do not stack. e.g. If you have two advantages, you roll only once.
             - If dis/advantage both occurs, regardless of the number of times, it's as if you have no dis/advantage and roll only one d20.
@@ -22,7 +23,11 @@ func rollAction() {
      */
 }
 
-/// Roll for initiative. Used to determine order of turns in combat.
+/**
+ Roll for initiative. Used to determine order of turns in combat.
+ 
+ TBD: Not sure if this is where the logic lives, but setting a "Surprised" flag on respective Creatures is required. As Creatures that are surprised can't attack on their first turn.
+ */
 func rollInitiative(for creatures: [Creature]) -> [Creature] {
     let groups = Dictionary(grouping: creatures, by: { abilityModifier(for: $0.ability.dexterity) })
     let sortedAbilityModifiers: [AbilityModifier] = groups.keys.sorted(by: >)
@@ -49,25 +54,75 @@ func rollInitiative(for creatures: [Creature]) -> [Creature] {
     return orderedCreatures
 }
 
-// MARK: - (Passive) Perception Check
+// MARK: Perception Check
 
-func rollForPerception() {
+/**
+ Perception checks can be passive or active.
+ 
+ As a Creature walks within the map, a Perception check may trigger automatically if they pass an area of interest. For example, there is a hidden door. There is a DC required to perceive the hidden door. All Creatures within the range of the door will roll a Perception check.
+ 
+ In a board game context, a player must actively state that they are looking for a specific object in a specific location. However, in games, this would probably need to be automatic. For example, walking by an AOI (area of interest), or the user opens a drawer to see if a key is hidden in the clothes.
+ */
+
+/**
+ Roll a Perception check.
+ */
+func rollPerceptionCheck(for difficultyClass: DifficultyClass) {
     // Compares hiding character's Dexterity (Stealth) with creature's Wisdom Modifier & Perception score and any other bonuses.
     // e.g. Target character has Dexterity 15 (+2 modifier) Stealth (+2) 10 + 2 + 2 = 14
     // e.g. Perceiving character has Wisdom 15 (+2 modifer) Perception (+3) 10 + 2 + 3 = 15
 }
 
-// MARK: - Choking
+// MARK: Suffocating & Choking
 
-func choke() {
+/**
+ Determine the number of minutes a Creature can hold its breath (choking, in water, etc).
+ 
+ Breath can be held for a number of minutes equal to 1 + Constitution modifier (min 30 seconds).
+ 
+ When Creature runs out of breath, or choking, they can survive for a number of rounds equal to its Constitution modifier (min 1 round). At the start of its next turn, it drops to 0 HP and is dying. It can't regain HP or be stabilized until it can breath again.
+ */
+func rollSuffocatingCheck() {
     // 1 + Constitution modifier, minimum of 30 seconds
     // Creature can survive for 1 round + Constitution modifier, minimum of 1 round
     // On next round, its HP drops to 0 and is dying. HP can not be regained or be stabilized until it can breath again
 }
 
+// MARK: Hiding
+
+/**
+ Check if a creature can hide.
+ 
+ Hiding is determined by:
+ - `Light`
+ - Whether you are `Obscured` (wall / bush / etc)
+ - If another creature is looking directly at you
+ - An arbitrary DM's DC value
+ 
+ The DC value may be something that can be computed based on `Light`, `Obscured`, or other factors.
+ 
+ The check's total value becomes the DC for subsequent Wisdom (Perception) checks.
+ 
+ You may lose hiding state by making certain actions (make noise, shout a warning, or making an attack). You may also lose hiding from Wisdom (Perception) checks.
+ 
+ An invisible Creature can always hide.
+ */
+func rollHidingCheck(/*Creature, Tile, Observing [Creatures], DifficultyClass?*/) -> Bool {
+    true
+}
+
+/**
+ Perform a Perception check.
+ 
+ 10 + Creature's Wisdom (Perception) Modifier + Proficiency in Perception
+ */
+func rollPerceptionCheck(/*Creature*/) {
+    
+}
+
 // MARK: - Falling
 
-func fallDamage() -> Int {
+func rollFallDamageCheck() -> Int {
     // 1d6 bludgeoning damage for every 10 feet it fell, to a maximum of 20d6
     0
 }
@@ -75,9 +130,9 @@ func fallDamage() -> Int {
 // MARK: - Ability Check
 
 /**
- Ability check test's a character / monster innate talent and training to overcome a challenge. DM calls for ability check when attempting an action (other than an attack) that has a chance for failure.
+ Ability check test's a character / monster innate talent and training to overcome a challenge. DM calls for ability check when attempting an action (other than an attack) that has a chance for failure. The DM is also responsible for defining the DC for the check.
  */
-func rollAbilityCheck(for ability: Ability) {
+func rollAbilityCheck(for ability: Ability, dc difficultyClass: DifficultyClass) {
     /**
      1. Determine Ability to check
      2. Choose Skill that applies to check
@@ -106,22 +161,12 @@ enum Reaction {
 }
 
 /// A list of Ability actions
-/// TODO: This is _very_ incomplete. These actions will be defined as the game progresses.
-/// These will eventually be mapped mapped to respective skills. Indeed, these may not be necessary at all. Unclear atm.
+/// TODO: This is _very_ incomplete. These actions will be defined as the game progresses. Unclear if these are necessary.
 enum AbilityAction {
     case jump
     case shove
     case hide
-}
-
-/// Returns the respective Ability, given an Action, to use for an Ability Check.
-func abilityForAction(_ action: AbilityAction) -> Ability {
-    switch action {
-    case .shove,
-         .jump,
-         .hide:
-        return .dexterity
-    }
+    case interact
 }
 
 typealias DifficultyClass = Int
