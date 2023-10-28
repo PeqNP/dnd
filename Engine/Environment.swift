@@ -44,6 +44,8 @@
 
  Some surfaces may require a successful Strength (Athletics) check. For example, slippery surfaces or one with few handholds. A Cube should hold this information along with DC.
  
+ Landing in difficult terrain, or jumping over a low wall (no taller than 1/4 of jump's distance), requires Strength (Athletics) check w/ DC 10. If difficult terrain, you land prone. If wall, you hit it.
+ 
  ## Being Prone
  
  You may drop prone without using any of your speed. Standing up costs an amount of movement equal to half your speed. e.g. If you have 30 speed, it will take 15 feet to stand up. You can't stand up if you less than half of your speed. You stay prone.
