@@ -21,8 +21,11 @@
      - Dodge - Until start of next turn rolls made against you have disadvantage (?) Need more information on how to determine what hits and what does not. This benefit is lost if you received incapicated condition or your speed is reduced to 0 by a condition or another effect (fear?).
      - Help
      - Hide
-     - Ready (need more explanation)
-     - Search
+     - Ready - Wait for trigger to occur before performing action. Usually when a foe crosses a boundary (line or tile). When preparing a spell, you hold its energy until the trigger occurs. This requires concentration. Therefore, if your concentration is broken, you may not be able to perform the action. A readied spell must have a cast time of 1 turn.
+       1. Decide trigger - Foe crosses boundary, steps on item, etc.
+       2. Decide action - Perform action when trigger is activated
+       3. Player may choose to perform right after trigger, or ignore it
+     - Search - Perform Wisdom (Perception) check to find something within a given diameter
      - Use a Magic Item - Scrolls, potions(?)
      - Use an Object - throw item(?)
      - Use a Special Ability
@@ -42,6 +45,27 @@
  If a reaction inturrupts another creature's turn, they may resume their turn after the reaction.
 
  A reaction typically triggers immediately at the trigger point unless the reaction says otherwise.
+
+ ## Making an Attack
+
+ Two attack types:
+ - Weapon
+ - Spell
+
+ 1. Choose a target (Creature, object, or location) within your attack range
+ 2. Determine modifiers - DM determines if target has cover or whether you have (dis)advantage against the target. Spells, special abilities, and other effects may apply penalties or bonuses to attack roll.
+ 3. Resolve the attack - Make attack roll. On a hit, you roll damage, unless attack has rules that specify otherwise. Some attacks cause special effects in addition to or instead of damage.
+
+ ### Attack Rolls
+
+ Check if attack hits or misses. Roll d20 and add modifiers. If > then target AC, the attack hits.
+
+ If using weapon, Strength ability modifier is added.
+ If using range, Dexterity ability modifier is added.
+
+ d20 + AbilityModifier + Proficiency
+
+ Some spells require an attack roll. Need more information. It says it's in the character sheet but doesn't identify the exact property to use.
 */
 
 import Foundation
@@ -65,7 +89,7 @@ enum DamageType {
 enum CombatAction {
     case help
     case hide
-    case ready // Needs more explanation
+    case ready // Wait for trigger to occur before performing action
     case search // Search for a noun - Reveal an invisible Creature
     case useItem // "Use a Magical Item" - Scrolls, potions(?)
     case useObject // "Use an Object" - Throw item(?), interact with something in the environment(?)
