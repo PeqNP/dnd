@@ -1,6 +1,8 @@
-@testable import dnd
+/// Copyright ⓒ 2023 Bithead LLC. All rights reserved.
 
 import Foundation
+
+@testable import dnd
 
 extension Creature.Ability {
     static func fake(

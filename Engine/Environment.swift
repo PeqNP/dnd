@@ -1,3 +1,5 @@
+/// Copyright ⓒ 2023 Bithead LLC. All rights reserved.
+
 /**
  Environment represents the stage `Creature`s play in.
 

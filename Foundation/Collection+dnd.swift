@@ -1,3 +1,5 @@
+/// Copyright ⓒ 2022 Bithead LLC. All rights reserved.
+
 import Foundation
 
 extension Collection {

@@ -1,7 +1,4 @@
-/**
- 
- Copyright © 2020 Bithead LLC. All rights reserved.
- */
+/// Copyright ⓒ 2020 Bithead LLC. All rights reserved.
 
 import Foundation
 

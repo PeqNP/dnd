@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A0AAF512AEFEDD100E810FF /* Equipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AAF502AEFEDD100E810FF /* Equipment.swift */; };
 		5A6B99922AE6A03C009D64EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6B99912AE6A03C009D64EB /* AppDelegate.swift */; };
 		5A6B99942AE6A03C009D64EB /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6B99932AE6A03C009D64EB /* GameViewController.swift */; };
 		5A6B99972AE6A03C009D64EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6B99952AE6A03C009D64EB /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A0AAF502AEFEDD100E810FF /* Equipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equipment.swift; sourceTree = "<group>"; };
 		5A6B99862AE6A03A009D64EB /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		5A6B99872AE6A03A009D64EB /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		5A6B99882AE6A03A009D64EB /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				A24F09B62AE7383C00B52F3D /* Environment.swift */,
 				A28B0E992AE87D02002A8E4E /* Library.swift */,
 				5A6B99C02AE6A7A3009D64EB /* Proficiency.swift */,
+				5A0AAF502AEFEDD100E810FF /* Equipment.swift */,
 			);
 			path = Engine;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				A24F09B52AE7368500B52F3D /* Combat.swift in Sources */,
 				A28B0E8D2AE86E4C002A8E4E /* AnalyticsListener.swift in Sources */,
 				A28B0E932AE86E79002A8E4E /* AnalyticsTransaction.swift in Sources */,
+				5A0AAF512AEFEDD100E810FF /* Equipment.swift in Sources */,
 				5A6B99922AE6A03C009D64EB /* AppDelegate.swift in Sources */,
 				A28B0E8F2AE86E58002A8E4E /* AnalyticsEvent.swift in Sources */,
 				A28B0E852AE86C69002A8E4E /* Collection+dnd.swift in Sources */,

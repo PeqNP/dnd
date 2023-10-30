@@ -1,9 +1,4 @@
-//
-//  RollForIntiative.swift
-//  dndTests
-//
-//  Created by Eric Chamberlain on 10/24/23.
-//
+/// Copyright ⓒ 2023 Bithead LLC. All rights reserved.
 
 import XCTest
 

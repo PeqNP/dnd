@@ -1,3 +1,5 @@
+/// Copyright ⓒ 2023 Bithead LLC. All rights reserved.
+
 /**
  # Combat
 
@@ -171,7 +173,41 @@
  If a Creature reaches 0 HP they either die outright or fall unconscious. e.g. a monster dies if its HP reaches 0, unless the DM decides to treat the monster like a character.
  
  Instant Death - When damage reduced to < 0, the damage remaining is checked against the total HP of the Creature. If it is >= the Creature's HP, it is dead. e.g. If Wizard has max 12 HP, has 6 HP, and takes 18 damage, the wizard's HP is reduced to 0 with 12 remaining damage. The remaing damage == the max HP. Therefore, he is dead.
- 
+
+ Falling Unconscious - If damage reduces a charcter to 0 hit points, and isn't fatal (see above), the character falls unconscious. This ends if the character is healed.
+
+ Death Saving Throws - When unconscious (0 HP), a character throws a death saving throw to determine if they creep closer to death. At beginning of each turn roll a d20. If 3 successive dice are rolled, the character becomes conscious (w/ 1 HP?). If 3 failures, they are dead. The rolls don't need to be consecutive. Keep track of rolls until determined. Both values are reset to zero once the character becomes conscious. If you roll a 1, it counts as two failures. If you roll a 20, you character regains 1 HP.
+
+ Damage at 0 HP - If a character is damaged while having 0 HP, they suffer 1 death saving throw failure. If from a critical hit, 2 failures. If the damage >= their HP, they die instantly (is this cumulative? or should this only count per hit?).
+
+ Stabilizing a Creature - Heal with potions or magic. Or provide first aid, which requires a successful DC 10 Wisdom (Medicine) check. A successful first aid throw stabilizes the Creature but stays at 0 HP. The Creature is no longer required to roll death saving throws. A stable Creature that isn't healed regains 1 HP after 1d4 hours (how is time computed?).
+
+ Knocking a Creature Out - If a Creature reaches 0 HP with a melee attack, the attacker can knock the Creature out.The attacker makes this choice the instant the damage is dealt. The Creature suffers the unconcious condition and is stable (no death saving throws required).
+
+ NOTE: Knocking a Creature out should not be available as an action except in story elements in the game, me thinks. There's no reason otherwise. Such as, you want to bring them alive as a reward for a bounty.
+
+ Harming Objects - Objects have a DC. Objects are immune to poison and psychic damage. DM decides if object is immune / resistant to other types of damage. e.g. It's hard to cut a rope with bludgeoning damage. Objects always fail Strength and Dexterity saving throws and are immune to other effects that require other saves. When an option HP drops to 0, it breaks. A Creature may also make a Strength check to try and break an object. The DC is set by DM.
+
+ ## Mounted Combat
+
+ TODO
+
+ ## Underwater Combat
+
+ TODO
+
+ ## Resting
+
+ Creatures may take 2 short rests / day and a long rest at the end of the day.
+
+ Short Rest - 1 hour long. They may only eat drink, or read. A Creature may spend one or more Hit Dice at the end of a short rest, up to Creature's maximum number of Hit Dice (noted in character sheet or stat block). For each Hit Die spent this way, the player rolls and adds the Creature's Constitution modifier to it. The Creature regains HP equal to the total (min of 0). The player can decide to spend an additional Hit Die after each roll.
+
+ Long Rest - 8 hours. Creature sleeps at least 6 hours and performs no more than 2 hours of light activity such as reading, talking, eating, or standing watch. If rest is interrupted -- at least 1 hour of walking, fighting, casting spells, etc. -- the Creature must restart the rest to gain any benefit. At the end of a long rest, all HP is restored. Creature also regains spent Hit Dice up to half of the Creature's total number of them (round down; min of one dice)(?).
+  - I don't quite understand the Hit Dice recovery rule
+  - Shouldn't all Hit Die be recovered?
+ A Creature must have at least 1 HP to gain long rest benefit.
+ A Creature can't benefit from more than one long rest in a 24 hour period. In other words, only one long rest may occur every 24 hours.
+
 */
 
 import Foundation

@@ -1,9 +1,4 @@
-//
-//  GameViewController.swift
-//  dnd iOS
-//
-//  Created by Eric Chamberlain on 10/23/23.
-//
+/// Copyright ⓒ 2023 Bithead LLC. All rights reserved.
 
 import UIKit
 import SpriteKit

@@ -1,3 +1,5 @@
+/// Copyright ⓒ 2023 Bithead LLC. All rights reserved.
+
 /**
  Encapsulates rules for an outcome of an action.
  */
@@ -171,6 +173,24 @@ func rollAbilityCheck(for ability: Ability, dc difficultyClass: DifficultyClass)
      */
 }
 
+/// Determine if a Creature, at 0 HP, may be healed for 1 HP.
+func rollFirstAidCheck(_ creature: Creature) -> Bool {
+    // Use Wisdom (Medicine) check against DC of 10.
+    false
+}
+
+func rollSavingThrow() {
+    /**
+     1. Determine Ability to use
+     2. Set the DC. This is determined by the Effect causing the save. e.g. The DC for a saving throw allowed by a spell is determined by the caster's spellcasting ability modifier + proficiency bonus.
+     3. Roll the d20
+        - Get proficiency bonus, if any
+        - Saving throw proficiency bonus, if any
+        - Apply any other bonuses / penalties as usual
+        - If total >= DC, it is a success
+     */
+}
+
 /// Check if a creature can hide. Hiding is determined by `Light`, whether you are `Obscured` (wall / bush / etc), or if another creature is looking directly at you.
 func hide() -> Bool {
     true
@@ -221,16 +241,4 @@ enum TaskDifficulty {
 /// TODO: Depending on the scenario a task difficulty must be determined. The `scenario` is currently undefined. This function may go away. The rule book states that there are rules to determine the task difficulty depending on the context.
 func taskDifficulty(for scenario: Int) -> TaskDifficulty {
     .veryEasy
-}
-
-func rollSavingThrow() {
-    /**
-     1. Determine Ability to use
-     2. Set the DC. This is determined by the Effect causing the save. e.g. The DC for a saving throw allowed by a spell is determined by the caster's spellcasting ability modifier + proficiency bonus.
-     3. Roll the d20
-        - Get proficiency bonus, if any
-        - Saving throw proficiency bonus, if any
-        - Apply any other bonuses / penalties as usual
-        - If total >= DC, it is a success
-     */
 }
