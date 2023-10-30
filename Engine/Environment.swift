@@ -61,6 +61,10 @@
  ## Flying
  
  If flying Creature is knocked prone, has its speed reduced to 0, or is otherwise deprived of the ability to move, the Creature falls unless it has the ability to hover or held aloft by magic. A Creature will take fall damage at this point, if any.
+ 
+ ## Grappled
+ 
+ If you are moving, while grappling a Creature, your movement is halved, unless Creature is 2 or more sizes smaller than you.
  */
 
 import Foundation

@@ -7,7 +7,7 @@ import Foundation
 // MARK: - The D20 roll
 
 /// TBD: This may be doing too much.
-func rollAction() {
+func rollAttack() {
     /**
      1. Roll d20
      2. Add Proficiency Bonus for Skill (requires creature sheet)
@@ -20,6 +20,14 @@ func rollAction() {
      4. Compare total against target number. Target number types:
         DC = Difficulty Class
         AC = Armor Class
+     
+     If roll = 20, the attack always hits.
+     If roll = 1, the attack always misses.
+     
+     If attacking a Creature you can't see, you have disadvantage. Alternatively, you have advantage if foe can't see you. You lose hidden status when making attack.
+     
+     Cover
+     Cover provides protection against attacks. If covered by >1, only the greater cover is used. e.g. If behind half Cover and 3/4 Cover, 3/4 Cover is used. Cover only works if directly between you and foe. This may be computed _outside_ of this function and computed as part of Creature's total AC.
      */
 }
 
@@ -125,6 +133,18 @@ func rollPerceptionCheck(/*Creature*/) {
 func rollFallDamageCheck() -> Int {
     // 1d6 bludgeoning damage for every 10 feet it fell, to a maximum of 20d6
     0
+}
+
+// MARK: - Grappling
+
+/**
+ Determine if a Creature may put another Creature in the Grappled condition.
+ 
+ Used also to determine if a target Creature can escape Grappled condition.
+ */
+func rollGrapple(/*Creature, target: Creature*/) {
+    // Creature uses Strength (Athletics) and is checked again ->
+    // Target Creature may use Strength (Athletics) or Dexterity (Acrobatics) for DC
 }
 
 // MARK: - Ability Check
