@@ -25,7 +25,7 @@
 		5A6B99B02AE6A03C009D64EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A6B99892AE6A03C009D64EB /* Assets.xcassets */; };
 		5A6B99BB2AE6A24C009D64EB /* Creature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6B99BA2AE6A24C009D64EB /* Creature.swift */; };
 		5A6B99BD2AE6A2EC009D64EB /* Ability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6B99BC2AE6A2EC009D64EB /* Ability.swift */; };
-		5A6B99BF2AE6A4F0009D64EB /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6B99BE2AE6A4F0009D64EB /* Action.swift */; };
+		5A6B99BF2AE6A4F0009D64EB /* Roll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6B99BE2AE6A4F0009D64EB /* Roll.swift */; };
 		5A6B99C12AE6A7A3009D64EB /* Proficiency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6B99C02AE6A7A3009D64EB /* Proficiency.swift */; };
 		A24F09B32AE733BC00B52F3D /* Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24F09B22AE733BC00B52F3D /* Alignment.swift */; };
 		A24F09B52AE7368500B52F3D /* Combat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24F09B42AE7368500B52F3D /* Combat.swift */; };
@@ -73,7 +73,7 @@
 		5A6B99A82AE6A03C009D64EB /* dnd_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = dnd_macOS.entitlements; sourceTree = "<group>"; };
 		5A6B99BA2AE6A24C009D64EB /* Creature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creature.swift; sourceTree = "<group>"; };
 		5A6B99BC2AE6A2EC009D64EB /* Ability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ability.swift; sourceTree = "<group>"; };
-		5A6B99BE2AE6A4F0009D64EB /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		5A6B99BE2AE6A4F0009D64EB /* Roll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roll.swift; sourceTree = "<group>"; };
 		5A6B99C02AE6A7A3009D64EB /* Proficiency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proficiency.swift; sourceTree = "<group>"; };
 		A24F09B22AE733BC00B52F3D /* Alignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alignment.swift; sourceTree = "<group>"; };
 		A24F09B42AE7368500B52F3D /* Combat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combat.swift; sourceTree = "<group>"; };
@@ -182,7 +182,6 @@
 			isa = PBXGroup;
 			children = (
 				5A6B99BC2AE6A2EC009D64EB /* Ability.swift */,
-				5A6B99BE2AE6A4F0009D64EB /* Action.swift */,
 				A24F09B22AE733BC00B52F3D /* Alignment.swift */,
 				A24F09B42AE7368500B52F3D /* Combat.swift */,
 				5A6B99BA2AE6A24C009D64EB /* Creature.swift */,
@@ -190,6 +189,7 @@
 				5A0AAF502AEFEDD100E810FF /* Equipment.swift */,
 				A28B0E992AE87D02002A8E4E /* Library.swift */,
 				5A6B99C02AE6A7A3009D64EB /* Proficiency.swift */,
+				5A6B99BE2AE6A4F0009D64EB /* Roll.swift */,
 				A266E83F2AF0CD0500A0EC5E /* Time.swift */,
 			);
 			path = Engine;
@@ -370,7 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A6B99BF2AE6A4F0009D64EB /* Action.swift in Sources */,
+				5A6B99BF2AE6A4F0009D64EB /* Roll.swift in Sources */,
 				A28B0E8A2AE86E24002A8E4E /* AnalyticsService.swift in Sources */,
 				A24F09B32AE733BC00B52F3D /* Alignment.swift in Sources */,
 				5A6B99AD2AE6A03C009D64EB /* GameScene.swift in Sources */,

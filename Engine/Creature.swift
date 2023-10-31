@@ -123,3 +123,12 @@ struct Creature: Equatable {
     let speed: Int
     let hitPoints: Int
 }
+
+/// A list of Ability actions
+/// TODO: This is _very_ incomplete. These actions will be defined as the game progresses. Unclear if these are necessary.
+enum AbilityAction {
+    case jump
+    case shove
+    case hide
+    case interact
+}

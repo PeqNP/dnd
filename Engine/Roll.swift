@@ -6,6 +6,13 @@
 
 import Foundation
 
+/// Defines whether an object, Creature, etc. has (dis)advantage on rolls
+enum Advantage {
+    case notApplicable
+    case yes
+    case no
+}
+
 // MARK: - The D20 roll
 
 /// TBD: This may be doing too much.
@@ -196,18 +203,7 @@ func hide() -> Bool {
     true
 }
 
-enum Reaction {
-    case opportunityAttack
-}
-
-/// A list of Ability actions
-/// TODO: This is _very_ incomplete. These actions will be defined as the game progresses. Unclear if these are necessary.
-enum AbilityAction {
-    case jump
-    case shove
-    case hide
-    case interact
-}
+// MARK: Tasks & Difficulty
 
 typealias DifficultyClass = Int
 

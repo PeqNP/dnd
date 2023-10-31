@@ -2,8 +2,6 @@
 
 import Foundation
 
-typealias ArmorClass = Int
-
 /**
  # Equipment
  
@@ -18,6 +16,8 @@ typealias ArmorClass = Int
  
  Anyone can wield a weapon, but you must have poficiency with it in order to add your proficiency bonus to an attack roll you make with it.
  */
+
+typealias ArmorClass = Int
 
 private let coinTypeValueTable: [CoinType: [CoinType: Double]] = [
     .copper: [
@@ -92,27 +92,27 @@ enum ArmorCategory {
     case heavyArmor
 }
 
-enum Advantage {
-    case notApplicable
-    case yes
-    case no
-}
-
 enum Armor {
+    // Light
     case leather
     case studdedLeather
-    
+
+    // Medium
     case hide
     case chainShirt
     case scaleMail
     case breastplate
     case halfPlate
-    
+
+    // Heavy
     case ringMail
     case chainMail
     case splint
     case plate
-    
+}
+
+/// Armor properties
+extension Armor {
     var armorType: ArmorCategory {
         switch self {
         case .leather,

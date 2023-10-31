@@ -252,3 +252,7 @@ enum Cover {
     case threeQuarters // +5 bonus to AC and Dexterity throws
     case total // Completely covered
 }
+
+enum Reaction {
+    case opportunityAttack
+}
