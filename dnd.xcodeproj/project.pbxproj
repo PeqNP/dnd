@@ -30,6 +30,8 @@
 		A24F09B32AE733BC00B52F3D /* Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24F09B22AE733BC00B52F3D /* Alignment.swift */; };
 		A24F09B52AE7368500B52F3D /* Combat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24F09B42AE7368500B52F3D /* Combat.swift */; };
 		A24F09B72AE7383C00B52F3D /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24F09B62AE7383C00B52F3D /* Environment.swift */; };
+		A266E83E2AF0C70900A0EC5E /* CoinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A266E83D2AF0C70900A0EC5E /* CoinTests.swift */; };
+		A266E8412AF0CDAD00A0EC5E /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = A266E83F2AF0CD0500A0EC5E /* Time.swift */; };
 		A28B0E852AE86C69002A8E4E /* Collection+dnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28B0E842AE86C69002A8E4E /* Collection+dnd.swift */; };
 		A28B0E872AE86D55002A8E4E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28B0E862AE86D55002A8E4E /* Logger.swift */; };
 		A28B0E8A2AE86E24002A8E4E /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28B0E892AE86E24002A8E4E /* AnalyticsService.swift */; };
@@ -76,6 +78,8 @@
 		A24F09B22AE733BC00B52F3D /* Alignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alignment.swift; sourceTree = "<group>"; };
 		A24F09B42AE7368500B52F3D /* Combat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combat.swift; sourceTree = "<group>"; };
 		A24F09B62AE7383C00B52F3D /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		A266E83D2AF0C70900A0EC5E /* CoinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinTests.swift; sourceTree = "<group>"; };
+		A266E83F2AF0CD0500A0EC5E /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		A26B1CD32AE835A700608170 /* dnd iOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "dnd iOS.xctestplan"; sourceTree = "<group>"; };
 		A28B0E842AE86C69002A8E4E /* Collection+dnd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+dnd.swift"; sourceTree = "<group>"; };
 		A28B0E862AE86D55002A8E4E /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
@@ -183,9 +187,10 @@
 				A24F09B42AE7368500B52F3D /* Combat.swift */,
 				5A6B99BA2AE6A24C009D64EB /* Creature.swift */,
 				A24F09B62AE7383C00B52F3D /* Environment.swift */,
+				5A0AAF502AEFEDD100E810FF /* Equipment.swift */,
 				A28B0E992AE87D02002A8E4E /* Library.swift */,
 				5A6B99C02AE6A7A3009D64EB /* Proficiency.swift */,
-				5A0AAF502AEFEDD100E810FF /* Equipment.swift */,
+				A266E83F2AF0CD0500A0EC5E /* Time.swift */,
 			);
 			path = Engine;
 			sourceTree = "<group>";
@@ -225,6 +230,7 @@
 			children = (
 				A28B0E962AE87064002A8E4E /* Fakes */,
 				A2D16E9C2AE82ADB000D3ACD /* RollForIntiativeTests.swift */,
+				A266E83D2AF0C70900A0EC5E /* CoinTests.swift */,
 			);
 			path = dndTests;
 			sourceTree = "<group>";
@@ -373,6 +379,7 @@
 				A28B0E9B2AE87EEA002A8E4E /* Library.swift in Sources */,
 				5A6B99942AE6A03C009D64EB /* GameViewController.swift in Sources */,
 				5A6B99C12AE6A7A3009D64EB /* Proficiency.swift in Sources */,
+				A266E8412AF0CDAD00A0EC5E /* Time.swift in Sources */,
 				A28B0E872AE86D55002A8E4E /* Logger.swift in Sources */,
 				A28B0E912AE86E6E002A8E4E /* AnalyticsPublisher.swift in Sources */,
 				A24F09B52AE7368500B52F3D /* Combat.swift in Sources */,
@@ -401,6 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A266E83E2AF0C70900A0EC5E /* CoinTests.swift in Sources */,
 				A2D16E9D2AE82ADB000D3ACD /* RollForIntiativeTests.swift in Sources */,
 				A28B0E982AE87070002A8E4E /* FakeCreature.swift in Sources */,
 			);
