@@ -17,6 +17,12 @@ enum Ability {
 typealias AbilityScore = Int
 typealias AbilityModifier = Int
 
+extension AbilityScore {
+    var modifier: AbilityModifier {
+        abilityModifier(for: self)
+    }
+}
+
 /// Ability Score & Modifiers (Proficiency Bonus?)
 private let abilityScoreModifier: [AbilityScore: AbilityModifier] = [
     1: -5,

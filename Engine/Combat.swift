@@ -122,6 +122,12 @@
  
  On a hit, unarmed strikes deal bludgeoning damage equal to 1 + your Strength modifier.
  
+ Improvised Weapons
+
+ You do not add proficiency bonus to attack rolls.
+
+ If thrown, its range is 20 normal, 60 long.
+
  ## Damage & Healing
  
  ### Hit Points
