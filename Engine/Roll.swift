@@ -13,6 +13,11 @@ enum Advantage {
     case no
 }
 
+struct Dice {
+    let number: Int
+    let sides: Int
+}
+
 // MARK: - The D20 roll
 
 /// TBD: This may be doing too much.

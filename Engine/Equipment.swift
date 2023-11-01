@@ -19,6 +19,8 @@ import Foundation
 
 typealias ArmorClass = Int
 
+// MARK: - Coins
+
 private let coinTypeValueTable: [CoinType: [CoinType: Double]] = [
     .copper: [
         .copper: 1,
@@ -86,6 +88,8 @@ struct CoinValue {
     // TBD: There may be a need to convert one `CoinType` to another. Leaving that for now. It may require an array of `CoinType` denominations. As partial coins may not be returned.
 }
 
+// MARK: - Armor
+
 enum ArmorCategory {
     case lightArmor
     case mediumArmor
@@ -130,6 +134,11 @@ extension Armor {
              .plate:
             return .heavyArmor
         }
+    }
+    
+    // TODO:
+    var name: String {
+        NSLocalizedString(String(describing: self), comment: "")
     }
     
     var armorClass: ArmorClass {
@@ -267,6 +276,108 @@ extension Armor {
             return 60
         case .plate:
             return 65
+        }
+    }
+}
+
+// MARK: Weapons
+
+enum WeaponCategory {
+    case simpleMelee
+    case martialMelee
+    case simpleRanged
+    case martialRanged
+}
+
+enum Weapon {
+    // Simple Melee Weapons
+    case club
+    case dagger
+    case greatclub
+    case handaxe
+    case javelin
+    case lightHammer
+    case mace
+    case quarterstaff
+    case spear
+    
+    // Simple Ranged Weapons
+    case lightCrossbow
+    case dart
+    case shortbow
+    case sling
+    
+    // Martial Melee Weapons
+    case battleaxe
+    case flail
+    case greataxe
+    case greatsword
+    case halberd
+    case longsword
+    case maul
+    case morningstar
+    case rapier
+    case scimitar
+    case shortsword
+    case trident
+    case warhammer
+    
+    // Martial Ranged Weapons
+    case handCrossbow
+    case heavyCrossbow
+    case longbow
+}
+
+struct WeaponDamage {
+    let dice: Dice
+    let type: DamageType
+}
+
+extension Weapon {
+    var damage: WeaponDamage {
+        switch self {
+        case .club,
+             .lightHammer,
+             .sling:
+            return .init(dice: .init(number: 1, sides: 4), type: .bludgeoning)
+        case .dagger,
+             .dart:
+            return .init(dice: .init(number: 1, sides: 4), type: .piercing)
+        case .greatclub,
+             .flail,
+             .warhammer:
+            return .init(dice: .init(number: 1, sides: 8), type: .bludgeoning)
+        case .handaxe,
+             .scimitar:
+            return .init(dice: .init(number: 1, sides: 6), type: .slashing)
+        case .javelin,
+             .spear,
+             .shortbow,
+             .shortsword,
+             .trident,
+             .handCrossbow:
+            return .init(dice: .init(number: 1, sides: 6), type: .piercing)
+        case .mace,
+             .quarterstaff:
+            return .init(dice: .init(number: 1, sides: 6), type: .bludgeoning)
+        case .lightCrossbow,
+             .morningstar,
+             .rapier,
+             .longbow:
+            return .init(dice: .init(number: 1, sides: 8), type: .piercing)
+        case .battleaxe,
+             .longsword:
+            return .init(dice: .init(number: 1, sides: 8), type: .slashing)
+        case .greataxe:
+            return .init(dice: .init(number: 1, sides: 12), type: .slashing)
+        case .greatsword:
+            return .init(dice: .init(number: 2, sides: 6), type: .slashing)
+        case .halberd:
+            return .init(dice: .init(number: 1, sides: 10), type: .slashing)
+        case .maul:
+            return .init(dice: .init(number: 2, sides: 6), type: .bludgeoning)
+        case .heavyCrossbow:
+            return .init(dice: .init(number: 1, sides: 10), type: .piercing)
         }
     }
 }
