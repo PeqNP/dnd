@@ -60,11 +60,11 @@ private let coinTypeValueTable: [CoinType: [CoinType: Double]] = [
 ]
 
 enum CoinType {
-    case copper
-    case silver
-    case electrum
-    case gold
-    case platinum
+    case copper // cp
+    case silver // sp
+    case electrum //ep
+    case gold // gp
+    case platinum // pp
     
     func value(in type: CoinType, for amount: Int) -> Double {
         let amount = Double(amount)
@@ -252,7 +252,7 @@ extension Armor {
     }
     
     // Returns weight of armor in pounds
-    var weight: Int {
+    var weight: Double {
         switch self {
         case .leather:
             return 10
@@ -333,6 +333,18 @@ struct WeaponDamage {
     let type: DamageType
 }
 
+enum WeaponProperty {
+    case light
+    case finesse
+    case thrown(min: Int, max: Int) // min, max = the range the weapon can be thrown
+    case versatile(dice: Dice)
+    case ammunition(min: Int, max: Int)
+    case loading
+    case twoHanded
+    case heavy
+    case reach
+}
+
 extension Weapon {
     var damage: WeaponDamage {
         switch self {
@@ -378,6 +390,163 @@ extension Weapon {
             return .init(dice: .init(number: 2, sides: 6), type: .bludgeoning)
         case .heavyCrossbow:
             return .init(dice: .init(number: 1, sides: 10), type: .piercing)
+        }
+    }
+    
+    var properties: [WeaponProperty] {
+        switch self {
+        case .club:
+            return [.light]
+        case .dagger:
+            return [.finesse, .light, .thrown(min: 20, max: 60)]
+        case .greatclub:
+            return [.twoHanded]
+        case .handaxe:
+            return [.light, .thrown(min: 20, max: 60)]
+        case .javelin:
+            return [.thrown(min: 30, max: 120)]
+        case .lightHammer:
+            return [.light, .thrown(min: 20, max: 60)]
+        case .mace:
+            return []
+        case .quarterstaff:
+            return [.versatile(dice: .init(number: 1, sides: 8))]
+        case .spear:
+            return [.thrown(min: 20, max: 60), .versatile(dice: .init(number: 1, sides: 8))]
+        case .lightCrossbow:
+            return [.ammunition(min: 80, max: 320), .loading, .twoHanded]
+        case .dart:
+            return [.finesse, .thrown(min: 20, max: 60)]
+        case .shortbow:
+            return [.ammunition(min: 80, max: 320), .twoHanded]
+        case .sling:
+            return [.ammunition(min: 30, max: 120)]
+        case .battleaxe:
+            return [.versatile(dice: .init(number: 1, sides: 8))]
+        case .flail:
+            return []
+        case .greataxe:
+            return [.heavy, .twoHanded]
+        case .greatsword:
+            return [.heavy, .twoHanded]
+        case .halberd:
+            return [.heavy, .reach, .twoHanded]
+        case .longsword:
+            return [.versatile(dice: .init(number: 1, sides: 10))]
+        case .maul:
+            return [.heavy, .twoHanded]
+        case .morningstar:
+            return []
+        case .rapier:
+            return [.finesse]
+        case .scimitar:
+            return [.finesse, .light]
+        case .shortsword:
+            return [.finesse, .light]
+        case .trident:
+            return [.thrown(min: 20, max: 60), .versatile(dice: .init(number: 1, sides: 8))]
+        case .warhammer:
+            return [.versatile(dice: .init(number: 1, sides: 10))]
+        case .handCrossbow:
+            return [.ammunition(min: 30, max: 120), .light, .loading]
+        case .heavyCrossbow:
+            return [.ammunition(min: 100, max: 400), .heavy, .loading, .twoHanded]
+        case .longbow:
+            return [.ammunition(min: 150, max: 600), .heavy, .twoHanded]
+        }
+    }
+    
+    var cost: CoinValue {
+        switch self {
+        case .club,
+             .sling:
+            return .init(type: .silver, amount: 1)
+        case .dagger,
+             .lightHammer:
+            return .init(type: .gold, amount: 2)
+        case .greatclub,
+             .quarterstaff:
+            return .init(type: .silver, amount: 2)
+        case .handaxe,
+             .mace,
+             .trident:
+            return .init(type: .gold, amount: 5)
+        case .javelin:
+            return .init(type: .silver, amount: 5)
+        case .spear:
+            return .init(type: .gold, amount: 1)
+        case .lightCrossbow,
+             .shortbow,
+             .rapier,
+             .scimitar:
+            return .init(type: .gold, amount: 25)
+        case .dart:
+            return .init(type: .copper, amount: 5)
+        case .battleaxe,
+             .flail,
+             .maul,
+             .shortsword:
+            return .init(type: .gold, amount: 10)
+        case .greataxe:
+            return .init(type: .gold, amount: 30)
+        case .greatsword,
+             .heavyCrossbow,
+             .longbow:
+            return .init(type: .gold, amount: 50)
+        case .halberd:
+            return .init(type: .gold, amount: 20)
+        case .longsword,
+             .morningstar,
+             .warhammer:
+            return .init(type: .gold, amount: 15)
+        case .handCrossbow:
+            return .init(type: .gold, amount: 75)
+        }
+    }
+    
+    /// Weight of Weapon in pounds (lbs)
+    var weight: Double {
+        switch self {
+        case .club,
+             .handaxe,
+             .javelin,
+             .lightHammer,
+             .shortbow,
+             .flail,
+             .rapier,
+             .shortsword,
+             .warhammer,
+             .longbow:
+            return 2
+        case .dagger:
+            return 1
+        case .greatclub,
+             .maul:
+            return 10
+        case .mace,
+             .quarterstaff,
+             .battleaxe,
+             .morningstar,
+             .trident:
+            return 4
+        case .spear,
+             .longsword,
+             .scimitar,
+             .handCrossbow:
+            return 3
+        case .lightCrossbow:
+            return 5
+        case .dart:
+            return 0.25
+        case .sling:
+            return 0
+        case .greataxe:
+            return 7
+        case .greatsword,
+             .halberd:
+            return 6
+        case .heavyCrossbow:
+            return 18
         }
     }
 }
