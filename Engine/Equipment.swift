@@ -421,6 +421,17 @@ extension Weapon {
     }
 }
 
-// MARK: - Adventuring Gear
+// MARK: - Adventuring Gear & Tools
 
+/**
+ Represents a Tool that can be used.
 
+ Some tools may be used in combat.
+
+ TBD: The function necessary to determine effect of Tool, if any.
+ */
+struct Tool {
+    let name: String
+    let cost: CoinValue
+    let weight: Double
+}
