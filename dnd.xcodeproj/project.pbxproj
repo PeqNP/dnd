@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C818560B411EFE08589135D /* Pods_dnd_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8294339AC900A4DF1FFD998 /* Pods_dnd_macOS.framework */; };
 		5A0AAF512AEFEDD100E810FF /* Equipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AAF502AEFEDD100E810FF /* Equipment.swift */; };
 		5A6B99922AE6A03C009D64EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6B99912AE6A03C009D64EB /* AppDelegate.swift */; };
 		5A6B99942AE6A03C009D64EB /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6B99932AE6A03C009D64EB /* GameViewController.swift */; };
@@ -27,9 +28,11 @@
 		5A6B99BD2AE6A2EC009D64EB /* Ability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6B99BC2AE6A2EC009D64EB /* Ability.swift */; };
 		5A6B99BF2AE6A4F0009D64EB /* Roll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6B99BE2AE6A4F0009D64EB /* Roll.swift */; };
 		5A6B99C12AE6A7A3009D64EB /* Proficiency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6B99C02AE6A7A3009D64EB /* Proficiency.swift */; };
+		A23E7F682AFB4AB0006FE166 /* GameViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E7F672AFB4AB0006FE166 /* GameViewModelTests.swift */; };
 		A24F09B32AE733BC00B52F3D /* Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24F09B22AE733BC00B52F3D /* Alignment.swift */; };
 		A24F09B52AE7368500B52F3D /* Combat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24F09B42AE7368500B52F3D /* Combat.swift */; };
 		A24F09B72AE7383C00B52F3D /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24F09B62AE7383C00B52F3D /* Environment.swift */; };
+		A26295D42AFB454300DFBAE1 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26295D32AFB454300DFBAE1 /* GameViewModel.swift */; };
 		A266E83E2AF0C70900A0EC5E /* CoinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A266E83D2AF0C70900A0EC5E /* CoinTests.swift */; };
 		A266E8412AF0CDAD00A0EC5E /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = A266E83F2AF0CD0500A0EC5E /* Time.swift */; };
 		A28B0E852AE86C69002A8E4E /* Collection+dnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28B0E842AE86C69002A8E4E /* Collection+dnd.swift */; };
@@ -43,6 +46,8 @@
 		A28B0E982AE87070002A8E4E /* FakeCreature.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28B0E972AE87070002A8E4E /* FakeCreature.swift */; };
 		A28B0E9B2AE87EEA002A8E4E /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28B0E992AE87D02002A8E4E /* Library.swift */; };
 		A2D16E9D2AE82ADB000D3ACD /* RollForIntiativeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D16E9C2AE82ADB000D3ACD /* RollForIntiativeTests.swift */; };
+		B66D0F342D7EBAFE211C4D58 /* Pods_dnd_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35D0FA39A267F74CF13CA74 /* Pods_dnd_iOS.framework */; };
+		DB24DFC8D80F32EEF68A78E0 /* Pods_dndTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B31F7D0A0CDA0D26C910290B /* Pods_dndTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07D675F903B8DCD2910830FF /* Pods-dndTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dndTests.debug.xcconfig"; path = "Target Support Files/Pods-dndTests/Pods-dndTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5A0AAF502AEFEDD100E810FF /* Equipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equipment.swift; sourceTree = "<group>"; };
 		5A6B99862AE6A03A009D64EB /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		5A6B99872AE6A03A009D64EB /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -75,9 +81,13 @@
 		5A6B99BC2AE6A2EC009D64EB /* Ability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ability.swift; sourceTree = "<group>"; };
 		5A6B99BE2AE6A4F0009D64EB /* Roll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roll.swift; sourceTree = "<group>"; };
 		5A6B99C02AE6A7A3009D64EB /* Proficiency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proficiency.swift; sourceTree = "<group>"; };
+		5D46C37A0E6A0FCF975E59C6 /* Pods-dnd iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dnd iOS.release.xcconfig"; path = "Target Support Files/Pods-dnd iOS/Pods-dnd iOS.release.xcconfig"; sourceTree = "<group>"; };
+		78577D1759B48397E1DA518A /* Pods-dnd iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dnd iOS.debug.xcconfig"; path = "Target Support Files/Pods-dnd iOS/Pods-dnd iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		A23E7F672AFB4AB0006FE166 /* GameViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModelTests.swift; sourceTree = "<group>"; };
 		A24F09B22AE733BC00B52F3D /* Alignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alignment.swift; sourceTree = "<group>"; };
 		A24F09B42AE7368500B52F3D /* Combat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combat.swift; sourceTree = "<group>"; };
 		A24F09B62AE7383C00B52F3D /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		A26295D32AFB454300DFBAE1 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		A266E83D2AF0C70900A0EC5E /* CoinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinTests.swift; sourceTree = "<group>"; };
 		A266E83F2AF0CD0500A0EC5E /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		A26B1CD32AE835A700608170 /* dnd iOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "dnd iOS.xctestplan"; sourceTree = "<group>"; };
@@ -93,6 +103,12 @@
 		A28B0E992AE87D02002A8E4E /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		A2D16E932AE82AAF000D3ACD /* dndTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dndTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2D16E9C2AE82ADB000D3ACD /* RollForIntiativeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollForIntiativeTests.swift; sourceTree = "<group>"; };
+		A8294339AC900A4DF1FFD998 /* Pods_dnd_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dnd_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2659B9F7A7A97DD2CE0D79F /* Pods-dnd macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dnd macOS.debug.xcconfig"; path = "Target Support Files/Pods-dnd macOS/Pods-dnd macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		B31F7D0A0CDA0D26C910290B /* Pods_dndTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dndTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB906DFA9708249F89580685 /* Pods-dnd macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dnd macOS.release.xcconfig"; path = "Target Support Files/Pods-dnd macOS/Pods-dnd macOS.release.xcconfig"; sourceTree = "<group>"; };
+		C35D0FA39A267F74CF13CA74 /* Pods_dnd_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dnd_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE7825181BE65D85BA37CA9A /* Pods-dndTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dndTests.release.xcconfig"; path = "Target Support Files/Pods-dndTests/Pods-dndTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B66D0F342D7EBAFE211C4D58 /* Pods_dnd_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C818560B411EFE08589135D /* Pods_dnd_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB24DFC8D80F32EEF68A78E0 /* Pods_dndTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +151,8 @@
 				5A6B99A02AE6A03C009D64EB /* dnd macOS */,
 				A2D16E942AE82AAF000D3ACD /* dndTests */,
 				5A6B998F2AE6A03C009D64EB /* Products */,
+				EF5971634C2996DE8F6B7A07 /* Pods */,
+				673C49F922A46158D5A87318 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,8 +180,8 @@
 		5A6B99902AE6A03C009D64EB /* dnd iOS */ = {
 			isa = PBXGroup;
 			children = (
+				A26295D22AFB452600DFBAE1 /* Game */,
 				5A6B99912AE6A03C009D64EB /* AppDelegate.swift */,
-				5A6B99932AE6A03C009D64EB /* GameViewController.swift */,
 				5A6B99952AE6A03C009D64EB /* Main.storyboard */,
 				5A6B99982AE6A03C009D64EB /* LaunchScreen.storyboard */,
 			);
@@ -193,6 +214,25 @@
 				A266E83F2AF0CD0500A0EC5E /* Time.swift */,
 			);
 			path = Engine;
+			sourceTree = "<group>";
+		};
+		673C49F922A46158D5A87318 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C35D0FA39A267F74CF13CA74 /* Pods_dnd_iOS.framework */,
+				A8294339AC900A4DF1FFD998 /* Pods_dnd_macOS.framework */,
+				B31F7D0A0CDA0D26C910290B /* Pods_dndTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A26295D22AFB452600DFBAE1 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				5A6B99932AE6A03C009D64EB /* GameViewController.swift */,
+				A26295D32AFB454300DFBAE1 /* GameViewModel.swift */,
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 		A28B0E832AE86C5C002A8E4E /* Foundation */ = {
@@ -229,10 +269,24 @@
 			isa = PBXGroup;
 			children = (
 				A28B0E962AE87064002A8E4E /* Fakes */,
-				A2D16E9C2AE82ADB000D3ACD /* RollForIntiativeTests.swift */,
 				A266E83D2AF0C70900A0EC5E /* CoinTests.swift */,
+				A23E7F672AFB4AB0006FE166 /* GameViewModelTests.swift */,
+				A2D16E9C2AE82ADB000D3ACD /* RollForIntiativeTests.swift */,
 			);
 			path = dndTests;
+			sourceTree = "<group>";
+		};
+		EF5971634C2996DE8F6B7A07 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				78577D1759B48397E1DA518A /* Pods-dnd iOS.debug.xcconfig */,
+				5D46C37A0E6A0FCF975E59C6 /* Pods-dnd iOS.release.xcconfig */,
+				B2659B9F7A7A97DD2CE0D79F /* Pods-dnd macOS.debug.xcconfig */,
+				BB906DFA9708249F89580685 /* Pods-dnd macOS.release.xcconfig */,
+				07D675F903B8DCD2910830FF /* Pods-dndTests.debug.xcconfig */,
+				DE7825181BE65D85BA37CA9A /* Pods-dndTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,9 +296,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A6B99B32AE6A03C009D64EB /* Build configuration list for PBXNativeTarget "dnd iOS" */;
 			buildPhases = (
+				3F2D555A4DA18D4DAB724BC7 /* [CP] Check Pods Manifest.lock */,
 				5A6B998A2AE6A03C009D64EB /* Sources */,
 				5A6B998B2AE6A03C009D64EB /* Frameworks */,
 				5A6B998C2AE6A03C009D64EB /* Resources */,
+				0C10F158957D58FE5112D166 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -259,9 +315,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A6B99B62AE6A03C009D64EB /* Build configuration list for PBXNativeTarget "dnd macOS" */;
 			buildPhases = (
+				86820890009D054EA539FDCB /* [CP] Check Pods Manifest.lock */,
 				5A6B999B2AE6A03C009D64EB /* Sources */,
 				5A6B999C2AE6A03C009D64EB /* Frameworks */,
 				5A6B999D2AE6A03C009D64EB /* Resources */,
+				48F4106EF8255F67E61D80BF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -276,9 +334,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A2D16E9B2AE82AAF000D3ACD /* Build configuration list for PBXNativeTarget "dndTests" */;
 			buildPhases = (
+				844C073147710DE664E1AEA9 /* [CP] Check Pods Manifest.lock */,
 				A2D16E8F2AE82AAF000D3ACD /* Sources */,
 				A2D16E902AE82AAF000D3ACD /* Frameworks */,
 				A2D16E912AE82AAF000D3ACD /* Resources */,
+				B8B708557594C6503F8978FA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -365,6 +425,126 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C10F158957D58FE5112D166 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dnd iOS/Pods-dnd iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dnd iOS/Pods-dnd iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-dnd iOS/Pods-dnd iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F2D555A4DA18D4DAB724BC7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-dnd iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48F4106EF8255F67E61D80BF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dnd macOS/Pods-dnd macOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dnd macOS/Pods-dnd macOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-dnd macOS/Pods-dnd macOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		844C073147710DE664E1AEA9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-dndTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86820890009D054EA539FDCB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-dnd macOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8B708557594C6503F8978FA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dndTests/Pods-dndTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dndTests/Pods-dndTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-dndTests/Pods-dndTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5A6B998A2AE6A03C009D64EB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -384,6 +564,7 @@
 				A28B0E912AE86E6E002A8E4E /* AnalyticsPublisher.swift in Sources */,
 				A24F09B52AE7368500B52F3D /* Combat.swift in Sources */,
 				A28B0E8D2AE86E4C002A8E4E /* AnalyticsListener.swift in Sources */,
+				A26295D42AFB454300DFBAE1 /* GameViewModel.swift in Sources */,
 				A28B0E932AE86E79002A8E4E /* AnalyticsTransaction.swift in Sources */,
 				5A0AAF512AEFEDD100E810FF /* Equipment.swift in Sources */,
 				5A6B99922AE6A03C009D64EB /* AppDelegate.swift in Sources */,
@@ -408,6 +589,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A23E7F682AFB4AB0006FE166 /* GameViewModelTests.swift in Sources */,
 				A266E83E2AF0C70900A0EC5E /* CoinTests.swift in Sources */,
 				A2D16E9D2AE82ADB000D3ACD /* RollForIntiativeTests.swift in Sources */,
 				A28B0E982AE87070002A8E4E /* FakeCreature.swift in Sources */,
@@ -568,11 +750,13 @@
 		};
 		5A6B99B42AE6A03C009D64EB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78577D1759B48397E1DA518A /* Pods-dnd iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "DnD Buddy";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
@@ -599,11 +783,13 @@
 		};
 		5A6B99B52AE6A03C009D64EB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D46C37A0E6A0FCF975E59C6 /* Pods-dnd iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "DnD Buddy";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
@@ -631,6 +817,7 @@
 		};
 		5A6B99B72AE6A03C009D64EB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2659B9F7A7A97DD2CE0D79F /* Pods-dnd macOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -638,6 +825,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -658,6 +846,7 @@
 		};
 		5A6B99B82AE6A03C009D64EB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB906DFA9708249F89580685 /* Pods-dnd macOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -665,6 +854,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -685,10 +875,12 @@
 		};
 		A2D16E992AE82AAF000D3ACD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07D675F903B8DCD2910830FF /* Pods-dndTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
@@ -704,10 +896,12 @@
 		};
 		A2D16E9A2AE82AAF000D3ACD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE7825181BE65D85BA37CA9A /* Pods-dndTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;

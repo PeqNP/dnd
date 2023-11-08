@@ -1,0 +1,37 @@
+PODS:
+  - SimpleViewModel (1.0.1)
+  - SimpleViewModelTest (1.0.1):
+    - SimpleViewModel (= 1.0.1)
+  - Swinject (2.6.2)
+
+DEPENDENCIES:
+  - SimpleViewModel (from `https://github.com/PeqNP/SimpleViewModel`)
+  - SimpleViewModelTest (from `https://github.com/PeqNP/SimpleViewModel`)
+  - Swinject (= 2.6.2)
+
+SPEC REPOS:
+  trunk:
+    - Swinject
+
+EXTERNAL SOURCES:
+  SimpleViewModel:
+    :git: https://github.com/PeqNP/SimpleViewModel
+  SimpleViewModelTest:
+    :git: https://github.com/PeqNP/SimpleViewModel
+
+CHECKOUT OPTIONS:
+  SimpleViewModel:
+    :commit: ddb271dc7b820bee9df5b60cecc0355a78f4ee6c
+    :git: https://github.com/PeqNP/SimpleViewModel
+  SimpleViewModelTest:
+    :commit: ddb271dc7b820bee9df5b60cecc0355a78f4ee6c
+    :git: https://github.com/PeqNP/SimpleViewModel
+
+SPEC CHECKSUMS:
+  SimpleViewModel: 34198a01d5ae10c681f17dff42d8c5eafe7dea7f
+  SimpleViewModelTest: 21a28a9524ade6a24f476cc863e8718111329c23
+  Swinject: cf7458774b1b00323080a9c67e47a1ee7f9d2af1
+
+PODFILE CHECKSUM: 7b6316222c0e65e6b4c17b2c7a7e08b46cf19c21
+
+COCOAPODS: 1.14.2

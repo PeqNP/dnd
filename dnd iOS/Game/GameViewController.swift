@@ -3,8 +3,12 @@
 import UIKit
 import SpriteKit
 import GameplayKit
+import SimpleViewModel
 
 class GameViewController: UIViewController {
+    
+    private lazy var viewModel = ViewModelInterface(viewModel: GameViewModel(), receive: receive)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,5 +33,11 @@ class GameViewController: UIViewController {
 
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+}
+
+extension GameViewController {
+    fileprivate func receive(output: GameViewModel.Output) {
+        
     }
 }
